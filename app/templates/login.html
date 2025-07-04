@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-        <style>
+    <title>Tela de Login</title>
+    <style>
         .container{
     display: flex;
     flex-direction: column;
@@ -30,9 +30,14 @@ input{
     </style>
 </head>
 <body>
+    
     <div class="container">
-        <h1>Home page</h1>
-        <a href="{{'loginpage'}}">Login</a>
+        <h1>Login</h1>
+        <input type="email" name="" id="" placeholder="Email">
+        <input type="password" name="" id="" placeholder="Senha">
+        <button>Enviar</button>
+        <a href="{{url_for('homepage')}}">Home</a>
     </div>
+
 </body>
 </html>
