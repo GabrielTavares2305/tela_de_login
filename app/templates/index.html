@@ -32,7 +32,9 @@ input{
 <body>
     <div class="container">
         <h1>Home page</h1>
-        <a href="{{'loginpage'}}">Login</a>
+        <p>Bem vindo {{context.usuario}} a home page</p>
+        <p>Email: {{context.email}}</p>
+        <a href="{{url_for('loginpage')}}">Login</a>
     </div>
 </body>
 </html>

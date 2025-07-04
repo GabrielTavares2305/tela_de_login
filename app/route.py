@@ -3,10 +3,17 @@ from flask import render_template, url_for
 
 @app.route('/')
 def homepage():
-    return 'Home'
+    usuario = 'DataPrev'
+    email = 'gabriel@dataprev.com'
+    context = {
+        'usuario': usuario,
+        'email': email
+    }
+
+    return render_template('index.html', context=context)
 
 
 
-@app.route('/login')
+@app.route('/login/')
 def loginpage():
-    return render_template('index.html')
+    return render_template('login.html')
