@@ -2,6 +2,12 @@ from app import app
 from flask import render_template, url_for
 
 @app.route('/')
+def loginpage():
+    return render_template('login.html')
+
+
+
+@app.route('/home/')
 def homepage():
     usuario = 'DataPrev'
     email = 'gabriel@dataprev.com'
@@ -14,6 +20,3 @@ def homepage():
 
 
 
-@app.route('/login/')
-def loginpage():
-    return render_template('login.html')

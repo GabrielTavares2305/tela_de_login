@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <style>
-        .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: brown;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 8%;
-    border-radius: 10px;
-}
-
-input{
-    width: 80%;
-    height: 40%;
-    outline: none;
-    font-size: 15px;
-}
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
+
 <body>
-    
-    <div class="container">
-        <h1>Login</h1>
-        <input type="email" name="" id="" placeholder="Email">
-        <input type="password" name="" id="" placeholder="Senha">
-        <button>Enviar</button>
-        <a href="{{url_for('homepage')}}">Home</a>
+
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Dataprev</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-4">
+                <div class="container mt-3">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="cpf" class="form-label">CPF:</label>
+                            <input type="number" id="cpf" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha:</label>
+                            <input type="password" id="senha" class="form-control">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <label for="avisar">Avisar antes de logar em outros sites.</label>
+                            <input type="checkbox" id="avisar" class="form-check-input">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary mb-4">Entrar</button>
+                            
+                            <button type="submit" class="btn btn-primary">Entrar com Certificado Digital</button>
+
+                            <a href="{{url_for('homepage')}}">Home</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
